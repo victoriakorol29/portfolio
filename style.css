@@ -3,15 +3,29 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  
+}
+@font-face {
+  font-family:CCOverbyteOffW00-Regular;
+  src: url(CCOverbyteOffW00-Regular.ttf);
 }
 
+:root{
+  --variable-color: #a4a3df;
+  --variable-color-sec: #89bdb0;
+  --variable-background:#d1e7eb;
+  --variable-background-2: #c2d7db;
+  --variable-color-hover:#94af8c;
+}
 /*HEADER*/
 
 header {
-  background-color: #f49579;
+  background-color: var(--variable-color);
   padding: 20px;
   position: fixed;
   width: 100%;
+  box-shadow: 0 0 11px white;
+
 }
 nav ul.encabezado {
   display: flex;
@@ -19,35 +33,36 @@ nav ul.encabezado {
   justify-content: flex-end;
   align-items: center;
   margin-right: 200px;
+  
 }
 span:hover{
-  color:#f4da47;
+  color:black;
 
 }
 li a {
   font-size: 20px;
   margin: 15px;
   text-decoration: none;
-  color: rgb(112, 111, 111);
+  color: rgb(233, 233, 233);
 }
 
 header nav ul .li-contacto {
-  background-color: #f4da47;
+  background-color:var(--variable-color-sec); 
   border-radius: 25px;
   padding: 10px;
 }
 
 header nav ul .li-contacto:hover{
-  background-color:#ffe449
+  background-color:black;
 }
 
 /*SECCIÓN 1*/
 
 section#hola {
-  background-color: #c4d9dc;
+  background-color:#d1e7eb;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   min-height: 100vh;
 }
 
@@ -57,43 +72,46 @@ section div.cont-inicio-txt {
 h1 {
   margin-bottom: 20px;
   font-size: 36px;
-  color: #f49579;
+  color: var(--variable-color-sec);
 }
 #vicky {
-  font-size: 48px;
+  font-size: 65px;
+  
   font-weight: bolder;
-  color: #198c8f;
+  color: var(--variable-color);
+  font-family: CCOverbyteOffW00-Regular;
 }
 h2 {
-  color: #292828;
+  color:gray;
   margin-bottom: 36px;
   font-size: 18px;
 }
 .lo-que-hago {
   font-size: 20px;
-  background-color: #f4da47;
+  background-color:var(--variable-color-sec);
   border-radius: 25px;
   padding: 10px;
-  color: rgb(123, 123, 123);
+  color:rgb(233, 233, 233);
   text-decoration: none;
 }
 
 .lo-que-hago:hover{
-  background-color:#ffe449
+  background-color: black;
 }
 
 section div.cont-imagen {
-  width: 500px;
+  max-width: 500px;
 }
 
 .img-bio {
-  width: 100%;
+display: block;
+  width: 150%;
 }
 
 /*SECCIÓN 2*/
 
 section#conocimientos {
-  background-color: #d1e7eb;
+  background-color: var(--variable-background-2);
   min-height: 100vh;
 }
 
@@ -105,7 +123,7 @@ div.mis-conocimientos-txt {
 }
 
 h3 {
-  color: #198c8f;
+  color: var(--variable-color);
   font-size: 36px;
   margin-bottom: 20px;
 }
@@ -126,7 +144,7 @@ div.mis-conocimientos-grid {
   border-radius: 5%;
 }
 .grid-item:hover {
-  border: 1px solid #198c8f;
+  border: 1px solid var(--variable-color-hover);
 }
 
 i {
@@ -139,36 +157,37 @@ section#blockquote {
   text-align: center;
   padding: 100px;
   font-size: 24px;
-  background-color: #f49579;
+  background-color:var(--variable-background);
   min-height: 90vh;
   display: flex;
 }
-svg {
-  width: 100px;
-  height: 100px;
-  color: #c4d9dc;
-  margin-bottom: 20px;
-}
+
 
 blockquote {
   font-size: 40px;
-  color: whitesmoke;
-  margin-bottom: 20px;
+  color: var(--variable-color);
   margin: auto;
   justify-content: center;
   align-items: center;
+}
+
+blockquote p {
+  font-family:CCOverbyteOffW00-Regular;
+  font-size: 150px;
+
 }
 
 h4 {
   font-size: 30px;
   font-weight: bolder;
   margin-top: 10px;
+  font-family:CCOverbyteOffW00-Regular;
 }
 
 /*SECCIÓN 3*/
 
 section#proyectos {
-  background-color: #d1e7eb;
+  background-color: var(--variable-background-2);
   min-height: 100vh;
 }
 div.poyectos-txt {
@@ -177,7 +196,7 @@ div.poyectos-txt {
   margin-bottom: 20px;
 }
 div.proyectos-grid {
-  max-height: 100vh;
+  min-height: 100vh;
   max-width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -199,13 +218,13 @@ div.proyectos-grid div img {
   text-align: center;
 }
 .grid-item-2:hover {
-  border: 1px solid #198c8f;
+  border: 1px solid var(--variable-color-sec);
 }
 
 /*CONTACTO*/
 
 section#contacto {
-  background-color: #c4d9dc;
+  background-color: var(--variable-background);
   display: flex;
   justify-content: space-evenly;
   min-height: 100vh;
@@ -229,11 +248,11 @@ div.contacto-txt {
 div.contacto-img i {
   font-size: 20px;
   padding: 5px;
-  color: #198c8f;
+  color: var(--variable-color);
 }
 
 div.contacto-img i:hover {
-  background-color: #c4d9dc;
+  background-color:black;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -282,13 +301,13 @@ input {
   border-radius: 20px;
   border-style: solid;
   border-width: 1px;
-  border-color: #198c8f;
+  border-color: var(--variable-color-sec);
   margin-top: 10px;
   padding-left: 10px;
   margin-bottom: 20px;
 }
 input:hover {
-  box-shadow: 0 0 11px #198c8f;
+  box-shadow: 0 0 11px var(--variable-color-sec);
 }
 
 .email input {
@@ -296,11 +315,11 @@ input:hover {
 }
 
 textarea:hover {
-  box-shadow: 0 0 11px #198c8f;
+  box-shadow: 0 0 11px var(--variable-color-sec);
 }
 textarea {
   border-radius: 20px;
-  border: 1px solid #198c8f;
+  border: 1px solid var(--variable-color-sec);
   margin-top: 10px;
   padding: 10px 15px;
   width: 100%;
@@ -312,15 +331,60 @@ button {
   margin-bottom: 20px;
   margin-top: 10px;
   text-transform: uppercase;
-  background-color: #f4da47;
+  background-color: var(--variable-color);
   border-radius: 10px;
   border:0;
   width: 100px;
   cursor: pointer;
 }
 button:hover{
-  background-color:#ffe449;
+  background-color:black;
+  color: var(--variable-color);
 }
 
 /*FOOTER*/
 
+footer{
+  min-height: 60vh;
+  background-color: var(--variable-color-sec);
+}
+.footer-nav{
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+
+}
+
+.footer-nav:hover{
+  color: black;
+}
+footer nav ul li{
+  list-style: none;
+  margin: 15px;
+  
+}
+
+
+.footer-media-links{
+  display: flex;
+  justify-content:center;
+  font-size: 10px;
+  
+}
+.footer-media-links li i{
+  font-size: 24px;
+  padding: 10px;
+  background-color: var(--variable-background);
+  border-radius: 50%;
+  color: var(--variable-color)
+
+}
+
+.footer-media-links li i:hover{
+  background-color: black;
+}
+footer p {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
