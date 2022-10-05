@@ -104,8 +104,8 @@ section div.cont-imagen {
 }
 
 .img-bio {
-display: block;
-  width: 150%;
+width: 100%;
+margin-top: 80px;
 }
 
 /*SECCIÓN 2*/
@@ -144,7 +144,7 @@ div.mis-conocimientos-grid {
   border-radius: 5%;
 }
 .grid-item:hover {
-  border: 1px solid var(--variable-color-hover);
+  border: 2px solid var(--variable-color-hover);
 }
 
 i {
@@ -200,14 +200,14 @@ div.proyectos-grid {
   max-width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px;
+  padding: 50px;
   margin: auto;
   gap: 15px;
 
 }
 div.proyectos-grid div img {
-  width: 100%;
   height: 100%;
+  width: 100%;
 }
 
 .grid-item-2 {
@@ -218,7 +218,7 @@ div.proyectos-grid div img {
   text-align: center;
 }
 .grid-item-2:hover {
-  border: 1px solid var(--variable-color-sec);
+  border: 2px solid var(--variable-color-sec);
 }
 
 /*CONTACTO*/
@@ -387,4 +387,11 @@ footer p {
   display: flex;
   justify-content: center;
   padding-top: 50px;
+}
+
+
+@media (min-width: 200px) and (max-width: 600px) {
+  footer{
+    background-color: red;
+  }
 }
