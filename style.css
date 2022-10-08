@@ -240,6 +240,7 @@ section#contacto {
 }
 div.contacto-txt {
   max-width: 500px;
+  padding-right: 30px;
 }
 
 div.contacto-img i {
